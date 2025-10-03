@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apotza: Your Business on Autopilot</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link
+      rel="icon"
+      href="https://avatars.githubusercontent.com/u/183683056?s=200&v=4"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="bg-gray-900 text-gray-200">
+    <!-- Navigation -->
+    <header
+      class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-sm shadow-md rounded-b-xl px-4 py-4"
+    >
+      <nav class="container mx-auto flex justify-between items-center">
+        <a
+          href="#home"
+          class="p-2 inline-flex items-center space-x-2 group transition-all duration-300 ease-in-out hover:scale-105"
+        >
+          <img
+            src="https://avatars.githubusercontent.com/u/183683056?s=200&v=4"
+            alt="Apotza Logo"
+            class="h-8 rounded-full animate-fade-in group-hover:animate-spin-slow"
+          />
+          <div
+            class="font-bold text-lg group-hover:text-blue-600 transition-colors duration-300"
+          >
+            Apotza
+          </div>
+        </a>
+        <div class="space-x-4 md:space-x-8 text-sm md:text-base font-medium">
+          <a
+            href="#home"
+            class="hover:text-blue-400 transition-colors duration-200"
+            >Home</a
+          >
+          <a
+            href="#workflows"
+            class="hover:text-blue-400 transition-colors duration-200"
+            >Workflows</a
+          >
+          <a
+            href="#pricing"
+            class="hover:text-blue-400 transition-colors duration-200"
+            >Pricing</a
+          >
+          <a
+            href="#about"
+            class="hover:text-blue-400 transition-colors duration-200"
+            >About Us</a
+          >
+          <a
+            href="#blog"
+            class="hover:text-blue-400 transition-colors duration-200"
+            >Blog</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 md:py-16">
+      <!-- Home Page -->
+      <section id="home" class="page-section">
+        <div class="text-center max-w-5xl mx-auto py-16 md:py-24">
+          <!-- Hero Section -->
+          <div id="hero-section">
+            <div class="mb-12">
+              <h1
+                class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter gradient-text drop-shadow-lg"
+              >
+                Stop Juggling Tasks.<br />Start Growing Your Business.
+              </h1>
+              <p
+                class="mt-4 text-lg md:text-2xl text-gray-400 font-medium max-w-3xl mx-auto"
+              >
+                Apotza builds custom AI workflows to handle your repetitive
+                work, so you can focus on what truly matters.
+              </p>
+              <button
+                id="get-started-btn"
+                class="mt-8 inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-transform duration-200 transform hover:scale-105"
+              >
+                Get Your Free Automation Plan
+              </button>
+            </div>
+
+            <!-- Visual Animation Section -->
+            <div
+              class="relative w-full max-w-4xl mx-auto h-48 md:h-64 flex justify-center items-center overflow-hidden"
+            >
+              <svg
+                class="absolute w-full h-full"
+                viewBox="0 0 800 200"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <!-- Chaotic elements -->
+                <circle
+                  class="animated-chaos"
+                  cx="150"
+                  cy="50"
+                  r="15"
+                  fill="#f87171"
+                />
+                <rect
+                  class="animated-chaos"
+                  x="200"
+                  y="100"
+                  width="20"
+                  height="20"
+                  fill="#fbbf24"
+                />
+                <polygon
+                  class="animated-chaos"
+                  points="250,50 280,100 220,100"
+                  fill="#34d399"
+                />
+                <path
+                  class="animated-chaos"
+                  d="M100,150 Q150,120 200,150"
+                  stroke="#a78bfa"
+                  stroke-width="5"
+                  fill="none"
+                />
+
+                <!-- Smooth line -->
+                <path
+                  id="flow-line"
+                  class="animated-line"
+                  d="M100,100 C 300,10 500,190 700,100"
+                  stroke="#3b82f6"
+                  stroke-width="8"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+
+                <!-- Smooth end points -->
+                <circle
+                  class="animated-blobs"
+                  cx="100"
+                  cy="100"
+                  r="15"
+                  fill="#3b82f6"
+                />
+                <circle
+                  class="animated-blobs"
+                  cx="700"
+                  cy="100"
+                  r="15"
+                  fill="#3b82f6"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Multi-Step Form Section -->
+          <div id="automation-form" class="mt-20 hidden">
+            <div
+              class="max-w-xl mx-auto bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700"
+            >
+              <!-- Progress Bar -->
+              <div class="flex justify-between items-center mb-8">
+                <div
+                  id="step-1-bar"
+                  class="progress-bar-item flex flex-col items-center"
+                >
+                  <div
+                    class="progress-step-icon w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-600 text-gray-400 font-bold"
+                  >
+                    1
+                  </div>
+                  <span class="text-xs text-gray-400 mt-2"
+                    >Your Pain Point</span
+                  >
+                </div>
+                <div class="flex-1 h-1 mx-2 bg-gray-700"></div>
+                <div
+                  id="step-2-bar"
+                  class="progress-bar-item flex flex-col items-center"
+                >
+                  <div
+                    class="progress-step-icon w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-600 text-gray-400 font-bold"
+                  >
+                    2
+                  </div>
+                  <span class="text-xs text-gray-400 mt-2">Your Details</span>
+                </div>
+                <div class="flex-1 h-1 mx-2 bg-gray-700"></div>
+                <div
+                  id="step-3-bar"
+                  class="progress-bar-item flex flex-col items-center"
+                >
+                  <div
+                    class="progress-step-icon w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-600 text-gray-400 font-bold"
+                  >
+                    3
+                  </div>
+                  <span class="text-xs text-gray-400 mt-2">Confirm</span>
+                </div>
+              </div>
+
+              <!-- Form Steps -->
+              <form id="pain-point-form" class="space-y-6">
+                <!-- Step 1: Pain Point -->
+                <div id="step-1" class="form-step">
+                  <h2 class="text-2xl font-bold text-blue-300 mb-4">
+                    Step 1: What is your biggest business pain point?
+                  </h2>
+                  <p class="text-gray-400 mb-4">
+                    Tell us about a repetitive task or challenge you face every
+                    day.
+                  </p>
+                  <textarea
+                    id="pain-point"
+                    name="painPoint"
+                    rows="5"
+                    class="w-full p-4 rounded-xl bg-gray-700 text-gray-200 border border-gray-600 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    placeholder="e.g., I spend hours manually tracking invoices and sending follow-up emails."
+                  ></textarea>
+                </div>
+
+                <!-- Step 2: Details -->
+                <div id="step-2" class="form-step hidden">
+                  <h2 class="text-2xl font-bold text-blue-300 mb-4">
+                    Step 2: A few more details...
+                  </h2>
+                  <p class="text-gray-400 mb-4">
+                    This helps us tailor your plan.
+                  </p>
+                  <div class="space-y-4">
+                    <input
+                      type="text"
+                      id="business-type"
+                      name="businessType"
+                      class="w-full p-4 rounded-xl bg-gray-700 text-gray-200 border border-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
+                      placeholder="Type of your business (e.g., Local Bakery, E-commerce Store)"
+                    />
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full p-4 rounded-xl bg-gray-700 text-gray-200 border border-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
+                      placeholder="Your email address"
+                    />
+                  </div>
+                </div>
+
+                <!-- Step 3: Confirmation -->
+                <div id="step-3" class="form-step hidden">
+                  <h2 class="text-2xl font-bold text-blue-300 mb-4">
+                    Step 3: Confirm & Submit
+                  </h2>
+                  <p class="text-gray-400 mb-4">
+                    Review your information and submit to get your free plan.
+                  </p>
+                  <div
+                    id="summary"
+                    class="bg-gray-700 p-4 rounded-xl space-y-2"
+                  >
+                    <p>
+                      <strong class="text-blue-300">Pain Point:</strong>
+                      <span id="summary-pain-point"></span>
+                    </p>
+                    <p>
+                      <strong class="text-blue-300">Business Type:</strong>
+                      <span id="summary-business-type"></span>
+                    </p>
+                    <p>
+                      <strong class="text-blue-300">Email:</strong>
+                      <span id="summary-email"></span>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Form Navigation Buttons -->
+                <div class="flex justify-between mt-6">
+                  <button
+                    type="button"
+                    id="prev-btn"
+                    class="px-6 py-3 bg-gray-600 text-white font-semibold rounded-full shadow-lg hover:bg-gray-700 transition-colors hidden"
+                  >
+                    Previous
+                  </button>
+                  <button
+                    type="button"
+                    id="next-btn"
+                    class="ml-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Next
+                  </button>
+                  <button
+                    type="submit"
+                    id="submit-btn"
+                    class="ml-auto px-6 py-3 bg-green-600 text-white font-semibold rounded-full shadow-lg hover:bg-green-700 transition-colors hidden"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+
+              <!-- Submission Confirmation Message -->
+              <div id="success-message" class="hidden text-center">
+                <h2 class="text-2xl font-bold text-green-400">Success! 🎉</h2>
+                <p class="mt-4 text-lg text-gray-300">
+                  Your information has been submitted. We'll be in touch soon
+                  with your custom automation plan!
+                </p>
+                <p class="mt-2 text-sm text-gray-500">
+                  You can close this form now.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem Section -->
+          <div class="mt-20">
+            <h2
+              class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-300"
+            >
+              Sound familiar? 🤔
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div
+                class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200 transform hover:scale-105"
+              >
+                <div class="text-4xl mb-4">✍️</div>
+                <h3 class="text-xl font-bold mb-2">Manual Data Entry</h3>
+                <p class="text-gray-400">
+                  Tired of repetitive, error-prone data entry?
+                </p>
+              </div>
+              <div
+                class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200 transform hover:scale-105"
+              >
+                <div class="text-4xl mb-4">📞</div>
+                <h3 class="text-xl font-bold mb-2">Following Up with Leads</h3>
+                <p class="text-gray-400">
+                  Leads slip through the cracks without follow-up.
+                </p>
+              </div>
+              <div
+                class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200 transform hover:scale-105"
+              >
+                <div class="text-4xl mb-4">📱</div>
+                <h3 class="text-xl font-bold mb-2">Managing Social Media</h3>
+                <p class="text-gray-400">
+                  The daily grind of creating and scheduling posts.
+                </p>
+              </div>
+              <div
+                class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200 transform hover:scale-105"
+              >
+                <div class="text-4xl mb-4">💬</div>
+                <h3 class="text-xl font-bold mb-2">
+                  Customer Support Overload
+                </h3>
+                <p class="text-gray-400">
+                  Repeating answers to the same questions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Section -->
+          <div class="mt-20">
+            <h2
+              class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-300"
+            >
+              This is How Apotza Helps You Win. 🏆
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
+                class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200 transform hover:scale-105"
+              >
+                <div class="text-6xl text-blue-400 mb-4">📈</div>
+                <h3 class="text-2xl font-bold mb-2">Automated Marketing</h3>
+                <p class="text-gray-400">
+                  Never miss a lead again. We automate your social media posts
+                  and email follow-ups.
+                </p>
+              </div>
+              <div
+                class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200 transform hover:scale-105"
+              >
+                <div class="text-6xl text-blue-400 mb-4">⚙️</div>
+                <h3 class="text-2xl font-bold mb-2">Streamlined Operations</h3>
+                <p class="text-gray-400">
+                  From invoicing to inventory, we put your essential tasks on
+                  autopilot.
+                </p>
+              </div>
+              <div
+                class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700 hover:border-blue-500 transition-colors duration-200 transform hover:scale-105"
+              >
+                <div class="text-6xl text-blue-400 mb-4">🤖</div>
+                <h3 class="text-2xl font-bold mb-2">AI-Powered Support</h3>
+                <p class="text-gray-400">
+                  Deliver instant answers to your customers 24/7 with a custom
+                  AI chatbot.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- How It Works Section -->
+          <div class="mt-20">
+            <h2
+              class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-300"
+            >
+              How It Works: 3 Simple Steps
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
+                class="text-center p-6 rounded-2xl bg-gray-800 shadow-lg border border-gray-700 transform transition-all duration-300 hover:bg-gray-700 hover:shadow-xl"
+              >
+                <div class="text-6xl mb-4">💡</div>
+                <h3 class="text-2xl font-bold">Step 1: Discover</h3>
+                <p class="text-gray-400 mt-2">
+                  Book a free call. We'll learn about your business and find
+                  your biggest automation opportunities.
+                </p>
+              </div>
+              <div
+                class="text-center p-6 rounded-2xl bg-gray-800 shadow-lg border border-gray-700 transform transition-all duration-300 hover:bg-gray-700 hover:shadow-xl"
+              >
+                <div class="text-6xl mb-4">🛠️</div>
+                <h3 class="text-2xl font-bold">Step 2: Build</h3>
+                <p class="text-gray-400 mt-2">
+                  Our experts design and build a custom AI workflow tailored
+                  specifically for your needs.
+                </p>
+              </div>
+              <div
+                class="text-center p-6 rounded-2xl bg-gray-800 shadow-lg border border-gray-700 transform transition-all duration-300 hover:bg-gray-700 hover:shadow-xl"
+              >
+                <div class="text-6xl mb-4">🚀</div>
+                <h3 class="text-2xl font-bold">Step 3: Deploy & Support</h3>
+                <p class="text-gray-400 mt-2">
+                  We launch your new automated system and provide full support
+                  to ensure it runs flawlessly.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonials Section -->
+          <div class="mt-20 max-w-4xl mx-auto">
+            <h2
+              class="text-3xl md:text-4xl font-bold mb-8 text-center text-blue-300"
+            >
+              What Our Clients Say
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div
+                class="p-8 bg-gray-800 rounded-2xl shadow-lg border border-gray-700 transform transition-all duration-300 hover:bg-gray-700 hover:shadow-xl"
+              >
+                <div class="text-5xl mb-4">"</div>
+                <p class="text-xl font-medium text-gray-300 italic mb-4">
+                  "Apotza saved our team over 10 hours a week! It's been a
+                  game-changer."
+                </p>
+                <p class="text-gray-400 font-semibold">
+                  - Sarah, Owner of a Local Bakery
+                </p>
+              </div>
+              <div
+                class="p-8 bg-gray-800 rounded-2xl shadow-lg border border-gray-700 transform transition-all duration-300 hover:bg-gray-700 hover:shadow-xl"
+              >
+                <div class="text-5xl mb-4">"</div>
+                <p class="text-xl font-medium text-gray-300 italic mb-4">
+                  "The custom AI chatbot is amazing. Our support team can now
+                  focus on complex issues."
+                </p>
+                <p class="text-gray-400 font-semibold">
+                  - Alex, CEO of a Tech Startup
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final CTA -->
+          <div
+            class="mt-20 text-center py-16 px-8 bg-gray-800 rounded-2xl shadow-lg border border-gray-700"
+          >
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-300 mb-4">
+              Ready to unlock your business's true potential?
+            </h2>
+            <a
+              href="#"
+              class="mt-6 inline-block px-10 py-5 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-transform duration-200 transform hover:scale-105"
+            >
+              Book a Free Consultation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workflows / Solutions Page -->
+      <section id="workflows" class="page-section">
+        <div class="max-w-4xl mx-auto py-16 md:py-24">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold text-center gradient-text mb-12"
+          >
+            Our Core Workflows 🧩
+          </h1>
+
+          <div class="space-y-12">
+            <!-- Marketing Automation -->
+            <div
+              class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700"
+            >
+              <h2 class="text-3xl font-bold mb-4 text-blue-300">
+                Marketing Automation 📈
+              </h2>
+              <ul class="space-y-4 text-gray-400 list-disc list-inside">
+                <li>Social Media Content Scheduler</li>
+                <li>Lead Nurturing Email Sequences</li>
+                <li>AI-Generated Ad Copy</li>
+              </ul>
+            </div>
+
+            <!-- Sales Automation -->
+            <div
+              class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700"
+            >
+              <h2 class="text-3xl font-bold mb-4 text-blue-300">
+                Sales Automation 💰
+              </h2>
+              <ul class="space-y-4 text-gray-400 list-disc list-inside">
+                <li>CRM Data Entry Automation</li>
+                <li>Meeting Scheduler & Reminder Bot</li>
+                <li>Automated Proposal Generation</li>
+              </ul>
+            </div>
+
+            <!-- Operations & Finance Automation -->
+            <div
+              class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700"
+            >
+              <h2 class="text-3xl font-bold mb-4 text-blue-300">
+                Operations & Finance Automation ⚙️
+              </h2>
+              <ul class="space-y-4 text-gray-400 list-disc list-inside">
+                <li>Smart Invoice Processing & Follow-up</li>
+                <li>Automated Reporting Dashboards</li>
+                <li>Inventory Management Alerts</li>
+              </ul>
+            </div>
+
+            <!-- Customer Support Automation -->
+            <div
+              class="bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-700"
+            >
+              <h2 class="text-3xl font-bold mb-4 text-blue-300">
+                Customer Support Automation 💬
+              </h2>
+              <ul class="space-y-4 text-gray-400 list-disc list-inside">
+                <li>24/7 AI Helpdesk Chatbot</li>
+                <li>Automated Ticket Routing</li>
+                <li>FAQ Response Bot</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Page -->
+      <section id="pricing" class="page-section">
+        <div class="max-w-5xl mx-auto py-16 md:py-24 text-center">
+          <h1 class="text-4xl md:text-5xl font-extrabold gradient-text mb-4">
+            Pricing Plans 💰
+          </h1>
+          <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+            Transparency is key. Choose the plan that's right for your business,
+            no hidden fees.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Tier 1: Starter Spark -->
+            <div
+              class="p-8 bg-gray-800 rounded-2xl shadow-lg border border-gray-700 transform transition-all duration-300 hover:scale-105"
+            >
+              <h2 class="text-3xl font-bold text-blue-300 mb-2">
+                Starter Spark ✨
+              </h2>
+              <p class="text-gray-400 mb-6">
+                Perfect for solopreneurs & new businesses.
+              </p>
+              <ul class="text-left space-y-3 mb-8 text-gray-300">
+                <li>✅ 1 Core Workflow</li>
+                <li>✅ Standard Support</li>
+                <li>✅ Basic Analytics</li>
+              </ul>
+              <a
+                href="#"
+                class="inline-block w-full px-8 py-4 bg-gray-700 text-gray-300 font-semibold rounded-full hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                Contact Sales
+              </a>
+            </div>
+
+            <!-- Tier 2: Growth Engine -->
+            <div
+              class="relative p-8 bg-gray-700 rounded-2xl shadow-lg border-2 border-blue-500 transform transition-all duration-300 hover:scale-105"
+            >
+              <div
+                class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold py-1 px-4 rounded-full"
+              >
+                MOST POPULAR
+              </div>
+              <h2 class="text-3xl font-bold text-blue-300 mb-2">
+                Growth Engine 🔥
+              </h2>
+              <p class="text-gray-400 mb-6">
+                For growing small to medium businesses.
+              </p>
+              <ul class="text-left space-y-3 mb-8 text-gray-300">
+                <li>✅ Up to 3 Workflows</li>
+                <li>✅ Integration with key tools (QuickBooks, Slack)</li>
+                <li>✅ Priority Support</li>
+                <li>✅ Advanced Analytics</li>
+              </ul>
+              <a
+                href="#"
+                class="inline-block w-full px-8 py-4 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-colors"
+              >
+                Book a Free Consultation
+              </a>
+            </div>
+
+            <!-- Tier 3: Automation Pro -->
+            <div
+              class="p-8 bg-gray-800 rounded-2xl shadow-lg border border-gray-700 transform transition-all duration-300 hover:scale-105"
+            >
+              <h2 class="text-3xl font-bold text-blue-300 mb-2">
+                Automation Pro 🚀
+              </h2>
+              <p class="text-gray-400 mb-6">
+                For established businesses ready to scale.
+              </p>
+              <ul class="text-left space-y-3 mb-8 text-gray-300">
+                <li>✅ Unlimited Workflows</li>
+                <li>✅ Custom Integrations</li>
+                <li>✅ Dedicated Account Manager</li>
+                <li>✅ Advanced Analytics & Reporting</li>
+              </ul>
+              <a
+                href="#"
+                class="inline-block w-full px-8 py-4 bg-gray-700 text-gray-300 font-semibold rounded-full hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-12 text-center">
+            <p class="text-gray-400 text-lg">
+              Not sure which plan is right for you?
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 transition-colors"
+                >Let's chat! Book a free consultation.</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Page -->
+      <section id="about" class="page-section">
+        <div class="max-w-4xl mx-auto py-16 md:py-24">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold text-center gradient-text mb-12"
+          >
+            About Us 👋
+          </h1>
+
+          <div
+            class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-lg border border-gray-700 space-y-8"
+          >
+            <!-- Our Mission -->
+            <div>
+              <h2 class="text-3xl font-bold text-blue-300 mb-4">Our Mission</h2>
+              <p class="text-lg text-gray-400 leading-relaxed">
+                To empower small and medium businesses with the same AI-powered
+                tools that large corporations use, leveling the playing field
+                for everyone. We believe that efficiency and growth should be
+                accessible to all, not just the tech giants.
+              </p>
+            </div>
+
+            <!-- The Team -->
+            <div>
+              <h2 class="text-3xl font-bold text-blue-300 mb-4">The Team</h2>
+              <p class="text-lg text-gray-400 leading-relaxed">
+                Apotza was founded by a team of passionate technologists,
+                including Sahil, an aspiring Software Developer and Data
+                Scientist with a BS from IIT Madras. We combine deep technical
+                expertise with a genuine desire to help businesses succeed. Our
+                background in data science and programming is a core part of how
+                we build intelligent, effective solutions for you.
+              </p>
+            </div>
+
+            <!-- Our Values -->
+            <div>
+              <h2 class="text-3xl font-bold text-blue-300 mb-4">Our Values</h2>
+              <ul class="text-gray-400 list-disc list-inside text-lg space-y-2">
+                <li>
+                  <strong>Simplicity:</strong> We make complex automation easy
+                  to understand and use.
+                </li>
+                <li>
+                  <strong>Partnership:</strong> We work with you, not just for
+                  you. Your success is our success.
+                </li>
+                <li>
+                  <strong>Results:</strong> We are obsessed with delivering
+                  tangible, measurable results for your business.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Page -->
+      <section id="blog" class="page-section">
+        <div class="max-w-4xl mx-auto py-16 md:py-24">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold text-center gradient-text mb-12"
+          >
+            Blog & Resources ✍️
+          </h1>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 transform transition-all duration-300 hover:scale-105"
+            >
+              <h3 class="text-xl font-bold text-blue-300 mb-2">
+                5 Repetitive Tasks You Can Automate in Your Business Today
+              </h3>
+              <p class="text-gray-400">
+                Learn how to instantly boost your productivity by automating
+                these common tasks.
+              </p>
+              <a
+                href="#"
+                class="mt-4 text-blue-400 hover:text-blue-300 transition-colors inline-block"
+                >Read More →</a
+              >
+            </div>
+            <div
+              class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 transform transition-all duration-300 hover:scale-105"
+            >
+              <h3 class="text-xl font-bold text-blue-300 mb-2">
+                How AI Can Help a Small Business Compete with Giants
+              </h3>
+              <p class="text-gray-400">
+                Discover how AI can be your secret weapon to level the playing
+                field.
+              </p>
+              <a
+                href="#"
+                class="mt-4 text-blue-400 hover:text-blue-300 transition-colors inline-block"
+                >Read More →</a
+              >
+            </div>
+            <div
+              class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 transform transition-all duration-300 hover:scale-105"
+            >
+              <h3 class="text-xl font-bold text-blue-300 mb-2">
+                A Beginner's Guide to AI Chatbots for Customer Service
+              </h3>
+              <p class="text-gray-400">
+                Everything you need to know to get started with chatbots for
+                support.
+              </p>
+              <a
+                href="#"
+                class="mt-4 text-blue-400 hover:text-blue-300 transition-colors inline-block"
+                >Read More →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="text-center py-8 text-gray-400 border-t border-gray-700 mt-8"
+    >
+      <p>&copy; 2024 Apotza. All rights reserved.</p>
+      <div class="mt-2 space-x-4">
+        <a href="#" class="hover:text-blue-400 transition-colors"
+          >Privacy Policy</a
+        >
+        <a href="#" class="hover:text-blue-400 transition-colors"
+          >Terms of Service</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
